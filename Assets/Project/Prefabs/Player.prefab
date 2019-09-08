@@ -52,6 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62de22f958f281b008a25261f58b512b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  climbableLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  climbSpeed: 4
 --- !u!114 &6170208164544052841
 MonoBehaviour:
   m_ObjectHideFlags: 0
