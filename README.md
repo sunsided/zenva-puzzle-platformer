@@ -14,6 +14,9 @@
   - Instead of changing the physics shape to a rectangle in the sprite editor,
     it might make sense to set the sprite's collider type to `Grid` instead (from the
     default of `Sprite`).
+  - The ladder sprite had its shape auto-generated and contained holes,
+    which was fixed manually by removing some vertices from the shape polygon
+    in the Sprite Editor.
 - In the Editor, an Icon gizmo can be assigned to any game object
   In 2019.3.0b2 this is done by clicking on the icon next to the active/enable
   checkbox in the Inspector. In the screenshot above, the waypoints for the
