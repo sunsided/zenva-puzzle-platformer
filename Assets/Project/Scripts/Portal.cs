@@ -8,19 +8,18 @@ public class Portal : MonoBehaviour
     [SerializeField]
     private int scene;
 
-    [SerializeField]
-    private Vector3 spawnPosition;
+    private Vector3 _spawnPosition;
 
     public int Id => portalId;
 
     public int Scene => scene;
 
-    public Vector3 SpawnPosition => spawnPosition;
+    public Vector3 SpawnPosition => _spawnPosition;
 
     private void Awake()
     {
         // We expect the first (and only) child of a portal to be the spawn position.
         Debug.Assert(transform.childCount == 1, "transform.childCount == 1");
-        spawnPosition = transform.GetChild(0).position;
+        _spawnPosition = transform.GetChild(0).position;
     }
 }
