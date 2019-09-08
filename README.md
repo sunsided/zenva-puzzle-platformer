@@ -37,3 +37,11 @@
   the ground when falling. Switching the body type to `Kinematic` and
   setting the collision detection to `Continuous` (from the default of
   `Discrete`) fixes this issue.
+
+## Things to learn
+
+- Right now, the invisible ladder top platform needs to be placed manually.
+  This is an issue, because the tile is placed on the grid, while the platform
+  is added manually afterwards. Apparently custom brushes can be used to automate
+  this behavior, such that the platform would be added, whenever a ladder top
+  is being painted.
