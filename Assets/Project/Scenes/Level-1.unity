@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3870712}
   - component: {fileID: 3870711}
   m_Layer: 5
-  m_Name: Key (2)
+  m_Name: Green Keys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 52498600}
   - component: {fileID: 52498599}
   m_Layer: 5
-  m_Name: Key
+  m_Name: Blue Keys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 300917381}
   - component: {fileID: 300917380}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Life Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,8 +855,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -872,7 +872,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1127,7 +1127,7 @@ GameObject:
   - component: {fileID: 647061249}
   - component: {fileID: 647061248}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Red Key Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,8 +1198,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1215,7 +1215,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1679,7 +1679,7 @@ GameObject:
   - component: {fileID: 1009463419}
   - component: {fileID: 1009463418}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Blue Key Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1750,8 +1750,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3547,6 +3547,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  keyCountTexts:
+  - {fileID: 1009463418}
+  - {fileID: 647061248}
+  - {fileID: 1861819942}
+  livesText: {fileID: 300917380}
 --- !u!4 &1510307043
 Transform:
   m_ObjectHideFlags: 0
@@ -3714,7 +3719,7 @@ GameObject:
   - component: {fileID: 1810034510}
   - component: {fileID: 1810034509}
   m_Layer: 5
-  m_Name: Key (1)
+  m_Name: Red Keys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3872,7 +3877,7 @@ GameObject:
   - component: {fileID: 1861819943}
   - component: {fileID: 1861819942}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Green Key Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3943,8 +3948,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3960,7 +3965,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
