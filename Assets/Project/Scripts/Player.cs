@@ -4,11 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    private GameManager _game;
     private int _hazardLayer;
 
     private void Awake()
     {
         _hazardLayer = LayerMask.NameToLayer("Hazard");
+
+        // TODO: Rather directly accessing the game manager here, expose behavior through events.
+        _game = FindObjectOfType<GameManager>();
     }
 
     private void OnCollisionEnter2D([NotNull] Collision2D other)
@@ -19,9 +23,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    private static void Die()
+    private void Die()
     {
         Debug.Log("Died!");
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        _game.RemoveLife();
+        // SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }
