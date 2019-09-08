@@ -18,6 +18,7 @@ public class Blade : MonoBehaviour
         var tf = transform;
         tf.Rotate(0, 0, -rotateSpeed * Time.deltaTime);
 
+        if (waypoints == null || waypoints.Length == 0) return;
 
         var pos = tf.position;
         var targetPos = waypoints[_targetIndex].position;
