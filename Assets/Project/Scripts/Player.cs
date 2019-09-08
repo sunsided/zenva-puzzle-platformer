@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -25,6 +26,13 @@ public class Player : MonoBehaviour
 
         // TODO: Rather directly accessing the game manager here, expose behavior through events.
         _game = FindObjectOfType<GameManager>();
+    }
+
+    private void Start()
+    {
+        // TODO: Rather directly accessing the portal controller here, maybe expose behavior through events?
+        var portalController = FindObjectOfType<PortalController>();
+        transform.position = portalController.GetSpawnPosition();
     }
 
     private void Update()

@@ -14,7 +14,7 @@ public class PortalController : MonoBehaviour
         _scenePortals = FindObjectsOfType<Portal>();
     }
 
-    public void SetSpawnPortal([NotNull] Portal portal)
+    public void TeleportTo([NotNull] Portal portal)
     {
         _portalToSpawnAt = portal.Id;
         PlayerPrefs.SetInt("PortalToSpawnAt", _portalToSpawnAt);
@@ -23,7 +23,7 @@ public class PortalController : MonoBehaviour
 
     public Vector3 GetSpawnPosition()
     {
-        _portalToSpawnAt = PlayerPrefs.GetInt("PortalToSpawnAt", -1);
+        _portalToSpawnAt = PlayerPrefs.GetInt("PortalToSpawnAt", 0);
 
         var spawnPos = Vector3.zero;
         foreach (var portal in _scenePortals)
