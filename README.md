@@ -2,6 +2,10 @@
 
 ![](.readme/editor-1.png)
 
+Note that this is not a complete game (although it does come with a
+complete set of levels). Some final tweaking and bug fixing is required
+to actually make this work.
+
 ## Lessons Learned
 
 - When working with sprites, have a `Sprites` asset folder with a
@@ -37,6 +41,10 @@
   the ground when falling. Switching the body type to `Kinematic` and
   setting the collision detection to `Continuous` (from the default of
   `Discrete`) fixes this issue.
+- Portals are being used to teleport the player from one scene to another.
+  In this case, `PlayerPrefs` are used to store the ID of the portal to
+  move to, and the player is being spawned at the stored position upon
+  loading of a scene.
 
 ## Things to learn
 
@@ -45,3 +53,5 @@
   is added manually afterwards. Apparently custom brushes can be used to automate
   this behavior, such that the platform would be added, whenever a ladder top
   is being painted.
+- Right now, each scene duplicates the game manager, HUD, etc.
+  Instead, investigating into additive scene loading may be worthwile.
